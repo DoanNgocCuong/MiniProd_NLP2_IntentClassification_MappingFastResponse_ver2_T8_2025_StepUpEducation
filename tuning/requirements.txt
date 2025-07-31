@@ -1,0 +1,4 @@
+soxr 
+librosa 
+soundfile 
+numba
