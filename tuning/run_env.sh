@@ -1,0 +1,1 @@
+docker run --gpus all -it --rm --name llm-unsloth -v $(pwd):/workspace -w /workspace llm-unsloth:latest
