@@ -1,3 +1,11 @@
 # === TUNING & MODEL FILES ===
 tuning/unsloth_compiled_cache/
 tuning/pretrained_models/
+
+---
+
+dataProcessing/utils_runGenData/input
+dataProcessing/utils_runGenData/output
+dataProcessing/utils_runGenData/eval
+dataProcessing/7_eval_compareFastResponse/__pycache__
+dataProcessing/utils_runGenData/__pycache__
