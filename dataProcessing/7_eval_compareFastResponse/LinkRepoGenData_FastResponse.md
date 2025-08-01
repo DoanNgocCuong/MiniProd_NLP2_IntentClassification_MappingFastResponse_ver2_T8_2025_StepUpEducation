@@ -1,0 +1,3 @@
+1. https://github.com/DoanNgocCuong/MiniProd_NLP2_IntentClassification_MappingFastResponse_ver2_T8_2025_StepUpEducation/tree/main/dataProcessing/7_eval_compareFastResponse/eval
+
+2. https://github.com/DoanNgocCuong/BasicTasks_Prompting/tree/main/7_eval_compareFastResponse
