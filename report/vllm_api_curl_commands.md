@@ -9,6 +9,10 @@
 
 ---
 
+Lúc server lên mình check thấy RAM chiếm dụng 17GB VRAM. 
+
+---
+
 ## 🔥 Test API cơ bản (Health check)
 ```bash
 curl http://localhost:30005/health

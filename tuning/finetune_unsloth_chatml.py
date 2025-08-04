@@ -8,7 +8,7 @@ from trl import SFTConfig, SFTTrainer
 max_seq_length = 2048 
 lora_rank = 16 
 dtype = None
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_VISIBLE_DEVICES"] = "1"
 MODEL_NAME = "unsloth/Qwen3-1.7B"
 PATH_CHAT_TEMPLATE = "/workspace/chat_template.txt"
 PATH_DATASET = "/workspace/dataset/pika_data.json"
