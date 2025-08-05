@@ -9,3 +9,4 @@ dataProcessing/utils_runGenData/output
 dataProcessing/utils_runGenData/eval
 dataProcessing/7_eval_compareFastResponse/__pycache__
 dataProcessing/utils_runGenData/__pycache__
+dataProcessing/3_callOpenAIgenFastResponseDataTool/.env
