@@ -1,11 +1,9 @@
-# Vấn đề xung đột phiên bản. 
+# Em deploy model bằng vllm và đang gặp vấn đề xung đột phiên bản như này ạ. Các anh đã gặp lỗi xung đột này bao giờ chưa ạ. Anh  @Đinh Hùng  , anh  @Hoài Lê Bá  , anh  @Truc Le Van   cứu em với ạ T_T
 
-# Em đang làm 1 bài finetune model: Qwen3-1.7B và host bằng vllm. 
-
-# Vấn đề 1: vllm/vllm-openai chỉ chỗ trợ Qwen3 từ  vllm/vllm-openai:v6. 
-
+# Em đang thử tìm các version vllm hỗ trợ Qwen3 và CUDA version 12.1 .... Nhưng chưa fix được ạ. 
+# vllm/vllm-openai chỉ chỗ trợ Qwen3 từ v6. 
 ```
-docker run --runtime nvidia --gpus '"device=1"' \
+docker run --runtime nvidia --gpus 'device=1' \
     -v ~/.cache/huggingface:/root/.cache/huggingface \
     -p 30005:8000 \
     --ipc=host \
@@ -19,15 +17,9 @@ docker run --runtime nvidia --gpus '"device=1"' \
     --swap-space 4
 ```
 
-Với vllm/vllm-openai:v0.4.2 thì không hõ trợ Qwen3. 
+- Với vllm/vllm-openai:v0.4.2 thì không hõ trợ Qwen3. 
+=> tăng version của vllm/vllm-openai:v0.4.2 lên v6, 7, 8, ....Nhưng: 
 
-=> tăng version của vllm/vllm-openai:v0.4.2 lên ver 6, ....8, .9, .10 
-Nhưng: 
+# Khi version của vllm/vllm-openai tăng lên thì lại yêu cầu CUDA Version >= 12.4  (TRONG KHI CUDA VERSION HIỆN TẠI 12.1)
 
-# Vấn đề 2: Khi version của vllm/vllm-openai tăng lên thì lại yêu cầu cấu hình card từ 12.1 (hiện tại) chuyển lên thành >= 12.4 
-
-Mà vấn đề chuyển cấu hình card từ 12.1 lên 12.4 thì ??? Có chuyển được không ạ? 
 ---
-
-
-# Ngồi 1h rưỡi không fix được bug version, T_T
