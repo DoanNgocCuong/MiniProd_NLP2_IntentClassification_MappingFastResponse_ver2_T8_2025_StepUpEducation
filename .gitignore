@@ -1,6 +1,6 @@
 # === TUNING & MODEL FILES ===
-tuning/unsloth_compiled_cache/
-tuning/pretrained_models/
+src/tuning/unsloth_compiled_cache/
+src/tuning/pretrained_models/
 
 ---
 
