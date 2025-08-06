@@ -1,0 +1,38 @@
+# Qwen vLLM Serving Configuration
+# StepUp Education Team - 2025
+
+# Model configuration
+model_path: "models/merged"  # Path to the fine-tuned model
+trust_remote_code: true
+
+# Server configuration  
+host: "0.0.0.0"
+port: 8000
+
+# vLLM engine configuration
+tensor_parallel_size: 1  # Number of GPUs to use in parallel
+gpu_memory_utilization: 0.9  # Fraction of GPU memory to use
+max_model_len: 2048  # Maximum sequence length
+dtype: "auto"  # Data type: "auto", "float16", "bfloat16", "float32"
+quantization: null  # Quantization method: null, "awq", "gptq", "squeezellm"
+max_num_seqs: 256  # Maximum number of sequences in a batch
+max_num_batched_tokens: 2048  # Maximum tokens in a batch
+enforce_eager: false  # Disable CUDA graph for debugging
+
+# Sampling default parameters
+temperature: 0.7  # Sampling temperature (0.0 to 2.0)
+top_p: 0.8  # Top-p (nucleus) sampling
+top_k: 20  # Top-k sampling
+max_tokens: 512  # Default maximum tokens to generate
+
+# API security (optional)
+api_key: null  # Set to enable API key authentication
+cors_allow_origins:  # CORS allowed origins
+  - "*"  # Allow all origins (change for production)
+
+# Performance tuning
+# For better performance, adjust these based on your hardware:
+# - Increase tensor_parallel_size for multi-GPU setups
+# - Increase gpu_memory_utilization if you have spare memory
+# - Increase max_num_seqs for higher throughput
+# - Use quantization (awq/gptq) to reduce memory usage

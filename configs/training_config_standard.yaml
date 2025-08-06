@@ -1,0 +1,64 @@
+# Qwen Standard LoRA Fine-tuning Configuration (Python 3.13+ Compatible)
+# StepUp Education Team - 2025
+
+# Model configuration
+model_name: "Qwen/Qwen2.5-7B-Instruct"  # Standard HF model names
+# Options:
+# - "Qwen/Qwen2.5-7B-Instruct" 
+# - "Qwen/Qwen2.5-14B-Instruct"
+# - "Qwen/Qwen2.5-32B-Instruct"
+# - For Qwen3: "Qwen/Qwen3-1.7B-Instruct", "Qwen/Qwen3-7B-Instruct"
+
+max_seq_length: 2048
+dtype: "bfloat16"  # "float16", "bfloat16", "float32"
+load_in_4bit: false  # Enable for memory efficiency (requires bitsandbytes)
+load_in_8bit: false
+
+# LoRA configuration
+r: 16  # LoRA rank - higher values = more parameters
+target_modules:
+  - "q_proj"
+  - "k_proj" 
+  - "v_proj"
+  - "o_proj"
+  - "gate_proj"
+  - "up_proj"
+  - "down_proj"
+lora_alpha: 16  # LoRA scaling parameter
+lora_dropout: 0.1  # Standard LoRA uses some dropout
+bias: "none"
+task_type: "CAUSAL_LM"
+
+# Training configuration
+per_device_train_batch_size: 1  # Reduce if GPU memory issues
+gradient_accumulation_steps: 8  # Effective batch = batch_size * accumulation
+warmup_steps: 10
+max_steps: 100  # Increase for real training (e.g., 1000+)
+learning_rate: 2.0e-4
+fp16: false  # Use bf16 instead for better stability
+bf16: true   # Better than fp16 for training
+weight_decay: 0.01
+lr_scheduler_type: "linear"
+optim: "adamw_torch"  # Standard PyTorch optimizer
+seed: 3407
+save_steps: 50
+
+# Data configuration
+dataset_text_field: "text"
+
+# Model saving configuration
+save_model: true
+save_method: "lora"  # Options: "lora", "merged"
+push_to_hub: false
+hub_model_id: ""  # e.g., "your-username/qwen-vietnamese-chat"
+hub_token: ""  # Hugging Face token
+output_dir: "outputs"
+
+# Logging and monitoring
+use_wandb: false  # Set to true to enable Weights & Biases
+wandb_project: "qwen-finetune-standard"
+wandb_run_name: ""  # Auto-generated if empty
+logging_steps: 1
+
+# Note: This config works with standard PyTorch/Transformers/PEFT
+# Compatible with Python 3.13+ without Unsloth dependency

@@ -1,0 +1,242 @@
+[
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 1. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 1. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 2. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 2. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 3. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 3. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 4. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 4. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 5. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 5. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 6. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 6. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 7. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 7. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 8. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 8. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 9. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 9. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 10. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 10. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 11. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 11. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 12. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 12. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 13. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 13. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 14. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 14. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 15. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 15. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 16. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 16. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 17. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 17. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 18. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 18. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 19. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 19. Đây là câu trả lời mẫu."
+      }
+    ]
+  },
+  {
+    "conversations": [
+      {
+        "role": "user",
+        "content": "Xin chào! Đây là câu hỏi số 20. Bạn có thể giúp tôi không?"
+      },
+      {
+        "role": "assistant",
+        "content": "Chào bạn! Tôi rất sẵn lòng giúp bạn với câu hỏi số 20. Đây là câu trả lời mẫu."
+      }
+    ]
+  }
+]

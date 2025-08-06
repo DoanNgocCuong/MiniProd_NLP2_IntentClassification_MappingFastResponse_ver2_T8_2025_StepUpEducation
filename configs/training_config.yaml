@@ -1,0 +1,56 @@
+# Qwen Fine-tuning Configuration
+# StepUp Education Team - 2025
+
+# Model configuration
+model_name: "unsloth/Qwen2.5-7B-Instruct-bnb-4bit"  # Options: Qwen2.5-7B, Qwen2.5-14B, Qwen3-*
+max_seq_length: 2048
+load_in_4bit: true
+
+# LoRA configuration
+r: 16  # LoRA rank - higher values = more parameters but better performance
+target_modules:
+  - "q_proj"
+  - "k_proj" 
+  - "v_proj"
+  - "o_proj"
+  - "gate_proj"
+  - "up_proj"
+  - "down_proj"
+lora_alpha: 16  # LoRA scaling parameter
+lora_dropout: 0.0
+bias: "none"
+use_gradient_checkpointing: "unsloth"
+use_rslora: false
+
+# Training configuration
+per_device_train_batch_size: 2  # Adjust based on GPU memory
+gradient_accumulation_steps: 4  # Effective batch size = batch_size * accumulation_steps * num_gpus
+warmup_steps: 5
+max_steps: 60  # Increase for real training (e.g., 1000+)
+learning_rate: 2.0e-4
+weight_decay: 0.01
+lr_scheduler_type: "linear"
+optim: "adamw_8bit"  # Memory efficient optimizer
+seed: 3407
+
+# Data configuration
+dataset_text_field: "text"
+packing: false  # Set to true for better GPU utilization with short sequences
+
+# Model saving configuration
+save_model: true
+save_method: "merged_16bit"  # Options: "lora", "merged_16bit", "merged_4bit"
+push_to_hub: false
+hub_model_id: ""  # e.g., "your-username/qwen-vietnamese-chat"
+hub_token: ""  # Hugging Face token for pushing to hub
+output_dir: "outputs"
+
+# Logging and monitoring
+use_wandb: false  # Set to true to enable Weights & Biases logging
+wandb_project: "qwen-finetune"
+wandb_run_name: ""  # Auto-generated if empty
+logging_steps: 1
+
+# Advanced settings (usually don't need to change)
+random_state: 3407
+loftq_config: null

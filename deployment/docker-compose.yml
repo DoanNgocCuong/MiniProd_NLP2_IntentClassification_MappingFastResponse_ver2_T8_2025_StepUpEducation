@@ -1,0 +1,73 @@
+# Qwen Fine-tuning Toolkit Docker Compose
+# StepUp Education Team - 2025
+
+version: '3.8'
+
+services:
+  # Main Qwen fine-tuning service
+  qwen-finetune:
+    build:
+      context: ..
+      dockerfile: deployment/Dockerfile
+    container_name: qwen-finetune
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount model and data directories for persistence
+      - ../models:/app/models
+      - ../data:/app/data
+      - ../configs:/app/configs
+      - ../outputs:/app/outputs
+    environment:
+      - CUDA_VISIBLE_DEVICES=0
+      - PYTHONPATH=/app/src
+      - TOKENIZERS_PARALLELISM=false
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1
+              capabilities: [gpu]
+    restart: unless-stopped
+    networks:
+      - qwen-network
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+  # Optional: Monitoring with Prometheus (uncomment if needed)
+  # prometheus:
+  #   image: prom/prometheus:latest
+  #   container_name: qwen-prometheus
+  #   ports:
+  #     - "9090:9090"
+  #   volumes:
+  #     - ./prometheus.yml:/etc/prometheus/prometheus.yml
+  #   networks:
+  #     - qwen-network
+  #   restart: unless-stopped
+
+  # Optional: Monitoring dashboard with Grafana (uncomment if needed)
+  # grafana:
+  #   image: grafana/grafana:latest
+  #   container_name: qwen-grafana
+  #   ports:
+  #     - "3000:3000"
+  #   environment:
+  #     - GF_SECURITY_ADMIN_PASSWORD=admin
+  #   volumes:
+  #     - grafana-storage:/var/lib/grafana
+  #   networks:
+  #     - qwen-network
+  #   restart: unless-stopped
+
+networks:
+  qwen-network:
+    driver: bridge
+
+# volumes:
+#   grafana-storage:
